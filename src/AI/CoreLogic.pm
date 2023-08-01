@@ -2693,7 +2693,7 @@ sub processFollow {
 						isFollow => 1
 					);
 				}
-			} else {
+			} elsif ($ai_v{'temp'}{'pos'}{'x'} && $ai_v{'temp'}{'pos'}{'y'}) {
 				moveAlongVector($ai_v{'temp'}{'pos'}, $chars[$config{'char'}]{'pos_to'}, $args->{'ai_follow_lost_vec'}, $config{'followLostStep'});
 				$char->move(@{$ai_v{temp}{pos}}{qw(x y)});
 			}
